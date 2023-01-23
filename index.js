@@ -147,9 +147,6 @@ addBtn.addEventListener("click", (e)=>{
         const newTaskCont = createAndAddTask(userInput, newTaskObj["status"]);
         taskContainerList.appendChild(newTaskCont);
     }
-    else{
-        alert("Task already present")
-    }
     textInput.value = "";
 
 })
