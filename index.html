@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+  <title>Todo app</title>
+
+</head>
+<body>
+  <main>
+    <picture>
+      <source srcset="images/bg-desktop-dark.jpg" media="(min-width: 700px)">
+      <img src="images/bg-mobile-dark.jpg" alt="">
+    </picture>
+  
+    <div class="main-app">
+      <header>
+        <h1>Todo</h1>
+      </header>
+      <form class="input-form flex-group designed-row">
+        <button class="addBtn" type="submit">
+          <img src="images/plus-solid.svg" alt="">
+        </button>
+        <input type="text" placeholder="Create a new todo...">
+      </form>
+      <div class="taskContList flex-group"></div>
+      <form class="filter-form flex-group designed-row">
+        <label for="All">
+          <input checked type="radio" name="filter" id="All" value="All">
+          <span>All</span>
+        </label>
+        <label for="completed">
+          <input type="radio" name="filter" id="completed" value="completed">
+          <span>Completed</span>
+        </label>
+        <label for="pending">
+          <input type="radio" name="filter" id="pending" value="pending">
+          <span>Pending</span>
+        </label>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
