@@ -141,12 +141,12 @@ addBtn.addEventListener("click", (e)=>{
         status: "pending"
     }
     let newTaskArray = (localStorage.getItem("taskList") === null ? [newTaskObj] : JSON.parse(localStorage.getItem("taskList")));
-    if (newTaskArray.indexOf(newTaskObj) === -1){
-        newTaskArray.push(newTaskObj);
-        localStorage.setItem("taskList", JSON.stringify(newTaskArray));
-        const newTaskCont = createAndAddTask(userInput, newTaskObj["status"]);
-        taskContainerList.appendChild(newTaskCont);
-    }
+
+    newTaskArray.push(newTaskObj);
+    localStorage.setItem("taskList", JSON.stringify(newTaskArray));
+    const newTaskCont = createAndAddTask(userInput, newTaskObj["status"]);
+    taskContainerList.appendChild(newTaskCont);
+
     textInput.value = "";
 
 })
